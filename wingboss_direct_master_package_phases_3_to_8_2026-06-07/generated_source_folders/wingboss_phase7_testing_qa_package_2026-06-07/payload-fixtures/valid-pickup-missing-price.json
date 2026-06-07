@@ -1,0 +1,71 @@
+{
+  "type": "wingboss_tma_order_v1",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-06-07T12:00:00+07:00",
+  "source": "telegram_mini_app",
+  "customer": {
+    "name": "Test Customer",
+    "phone": "012345678",
+    "telegramUserId": 123456789,
+    "telegramUsername": "testuser"
+  },
+  "orderType": "pickup",
+  "delivery": {
+    "address": "",
+    "notes": ""
+  },
+  "items": [
+    {
+      "lineId": "line_001",
+      "itemId": "item_001",
+      "itemName": "TEST ITEM PRICE REQUIRED",
+      "quantity": 1,
+      "basePrice": "PRICE_REQUIRED_FROM_MENU",
+      "flavor": {
+        "flavorId": "flavor_001",
+        "flavorName": "Buffalo",
+        "type": "sauce",
+        "priceModifier": 0
+      },
+      "heat": {
+        "tierId": "hot",
+        "label": "Hot",
+        "priceUsd": 0.25,
+        "points": 25
+      },
+      "addons": [
+        {
+          "addonId": "dip_30ml",
+          "addonName": "30ml Dip",
+          "quantity": 1,
+          "price": 0.75
+        }
+      ],
+      "notes": "No onions"
+    }
+  ],
+  "pricing": {
+    "verified": false,
+    "subtotal": "STAFF_CONFIRM_REQUIRED",
+    "deliveryFee": "STAFF_CONFIRM_REQUIRED",
+    "total": "STAFF_CONFIRM_REQUIRED",
+    "currency": "USD",
+    "issues": [
+      "MISSING_PRICE"
+    ]
+  },
+  "heat": {
+    "currentOrderHeatSpendUsd": 0.25,
+    "currentOrderHeatScore": 25,
+    "maxHeatLevelReached": "hot",
+    "bottleSuggestionShown": false
+  },
+  "validation": {
+    "isValid": true,
+    "blockingIssues": [],
+    "staffReviewIssues": [
+      "MISSING_PRICE"
+    ]
+  },
+  "status": "submitted"
+}

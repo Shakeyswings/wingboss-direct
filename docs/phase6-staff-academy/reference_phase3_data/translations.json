@@ -1,0 +1,105 @@
+{
+  "systemName": "Wing⚡Boss Translations",
+  "version": "phase3-app-ready-2026-06-07",
+  "defaultLanguage": "en",
+  "fallbackLanguage": "en",
+  "supportedLanguages": [
+    "en",
+    "km",
+    "zh",
+    "ko",
+    "ja",
+    "ru"
+  ],
+  "rule": "English is source of truth. Khmer from uploaded package where available. Chinese/Korean/Japanese/Russian placeholders until manually localized.",
+  "strings": {
+    "app.startOrder": {
+      "en": "Start Order",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "app.orderAgain": {
+      "en": "Order Again",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "app.staffWillConfirm": {
+      "en": "Staff will confirm shortly.",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "pricing.staffConfirm": {
+      "en": "Staff will confirm",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "heat.score": {
+      "en": "Heat Score",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "heat.redeemReward": {
+      "en": "Redeem Heat Reward",
+      "km": "KHMER_TRANSLATION_REQUIRED",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "customer.mainFlavorBuilder": {
+      "en": "🔥 Build Your Perfect Flavor\n\nChoose your sauce OR dry rub for wings.\n\nWant more flavor?\nAdd Dry Rub or Drizzle to Wings, Burgers, or Sides.\n\nStandard Dry Rub / Drizzle: +$0.50 per serving\nD4 All 3 Drizzles: +$1.00 per serving\n3-for-$1 Rub/Drizzle Upgrade: choose any 3 standard rubs/drizzles for +$1.00 per serving\n\nPremium Hot Sauce Drizzles:\nD5 Mango Mayhem +$1.00 per serving\nD6 Strawberry Armageddon +$1.00 per serving\n\nExtra Sauce: +$1.00\nDips: 30ml $0.75 / 60ml $1.40 / 90ml $2.00\n\nFlavor upgrades are per serving:\n6 wings / 8 boneless / 1 burger / 1 side.",
+      "km": "🔥 បង្កើតរសជាតិដែលអ្នកចូលចិត្ត\n\nសម្រាប់ Wings អាចជ្រើស Sauce ឬ Dry Rub។\n\nចង់បន្ថែមរសជាតិ?\nអាចបន្ថែម Dry Rub ឬ Drizzle លើ Wings, Burgers ឬ Sides បាន។\n\nDry Rub / Drizzle ធម្មតា: +$0.50 ក្នុងមួយ portion\nD4 Drizzle ទាំង 3: +$1.00 ក្នុងមួយ portion\nជ្រើស 3 មុខ +$1.00: ជ្រើស rub/drizzle ធម្មតា 3 មុខ\n\nPremium Hot Sauce Drizzle:\nD5 Mango Mayhem +$1.00 ក្នុងមួយ portion\nD6 Strawberry Armageddon +$1.00 ក្នុងមួយ portion\n\nExtra Sauce: +$1.00\nDips: 30ml $0.75 / 60ml $1.40 / 90ml $2.00\n\nការបន្ថែមរសជាតិគិតតាម portion:\n6 wings / 8 boneless / burger 1 / side 1។",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "customer.advancedIntro": {
+      "en": "🔥 Advanced Flavor Menu\n\nFor experienced Wing⚡Boss customers.\n\nThese are custom sauces, dry rubs, and flavor blends from our full flavor vault.\n\nSome flavors may be out of stock.\nSome extreme flavors require a premium heat upgrade.\n\nSingle 🌶️ means the flavor is naturally spicy and does not add extra cost.",
+      "km": "🔥 Advanced Flavor Menu\n\nសម្រាប់ customer ដែលស្គាល់រសជាតិ Wing⚡Boss រួចហើយ។\n\nនេះជា sauce, dry rub និង flavor mix ពិសេសៗពី flavor vault របស់យើង។\n\nរសជាតិខ្លះអាចអស់ស្តុក។\nរសជាតិហឹរខ្លាំងខ្លះ មានតម្លៃបន្ថែម។\n\n🌶️ មួយ មានន័យថារសជាតិនោះហឹរធម្មជាតិ មិនគិតថ្លៃបន្ថែម។",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "category.a": {
+      "en": "A Wings & Boneless",
+      "km": "A Wings និង Boneless",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "category.b": {
+      "en": "B Burgers",
+      "km": "B Burgers",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    },
+    "category.c": {
+      "en": "C Sides",
+      "km": "C Sides",
+      "zh": "CHINESE_TRANSLATION_REQUIRED",
+      "ko": "KOREAN_TRANSLATION_REQUIRED",
+      "ja": "JAPANESE_TRANSLATION_REQUIRED",
+      "ru": "RUSSIAN_TRANSLATION_REQUIRED"
+    }
+  }
+}

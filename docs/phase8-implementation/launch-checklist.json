@@ -1,0 +1,127 @@
+{
+  "title": "WingBoss Direct MVP Launch Checklist",
+  "status": "Prepared",
+  "sections": [
+    {
+      "name": "Frontend",
+      "items": [
+        {
+          "check": "npm install completed",
+          "required": true
+        },
+        {
+          "check": "npm run build passed",
+          "required": true
+        },
+        {
+          "check": "frontend deployed on HTTPS",
+          "required": true
+        },
+        {
+          "check": "Mini App opens inside Telegram",
+          "required": true
+        },
+        {
+          "check": "outside-Telegram fallback works",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        {
+          "check": "BOT_TOKEN set server-side only",
+          "required": true
+        },
+        {
+          "check": "STAFF_GROUP_ID set server-side only",
+          "required": true
+        },
+        {
+          "check": "OWNER_TELEGRAM_ID set",
+          "required": true
+        },
+        {
+          "check": "npm run verify passed",
+          "required": true
+        },
+        {
+          "check": "bot responds to /start",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "items": [
+        {
+          "check": "pickup order test passed",
+          "required": true
+        },
+        {
+          "check": "delivery order test passed",
+          "required": true
+        },
+        {
+          "check": "missing flavor blocked",
+          "required": true
+        },
+        {
+          "check": "missing price displayed as Staff will confirm",
+          "required": true
+        },
+        {
+          "check": "staff group receives kitchen summary",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Heat Economy",
+      "items": [
+        {
+          "check": "Heat Score meter visible",
+          "required": true
+        },
+        {
+          "check": "bottle suggestion threshold works",
+          "required": true
+        },
+        {
+          "check": "points not awarded on submit",
+          "required": true
+        },
+        {
+          "check": "points awarded only after paid + completed + not refunded",
+          "required": true
+        },
+        {
+          "check": "cancel/refund does not award points",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Staff",
+      "items": [
+        {
+          "check": "staff action buttons work",
+          "required": true
+        },
+        {
+          "check": "Staff Academy opens",
+          "required": true
+        },
+        {
+          "check": "packaging checklist available",
+          "required": true
+        },
+        {
+          "check": "customer clarification scripts available",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

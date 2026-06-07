@@ -1,0 +1,70 @@
+{
+  "systemName": "Wing⚡Boss Order Reading Examples",
+  "version": "phase6-2026-06-07",
+  "examples": [
+    {
+      "id": "ex_standard_001",
+      "title": "Standard sauce order",
+      "ticket": "12 Wings / Buffalo / Ranch 60ml",
+      "readAs": [
+        "Item: 12 Wings",
+        "Flavor: Buffalo sauce",
+        "Add-on: Ranch 60ml"
+      ],
+      "staffRisk": "Do not forget paid dip cup."
+    },
+    {
+      "id": "ex_dryrub_001",
+      "title": "Dry rub order",
+      "ticket": "6 Wings / Midnight Rub / No Sauce",
+      "readAs": [
+        "Item: 6 Wings",
+        "Flavor: Midnight Rub dry rub",
+        "Sauce: none unless separately selected"
+      ],
+      "staffRisk": "Do not add wet sauce."
+    },
+    {
+      "id": "ex_heat_001",
+      "title": "High heat order",
+      "ticket": "12 Wings / Firestorm / Revenge",
+      "readAs": [
+        "Item: 12 Wings",
+        "Flavor: Firestorm",
+        "Heat: Revenge"
+      ],
+      "staffRisk": "Confirm heat before cooking."
+    },
+    {
+      "id": "ex_missing_001",
+      "title": "Missing price order",
+      "ticket": "Item price: PRICE_REQUIRED_FROM_MENU",
+      "readAs": [
+        "Staff must confirm total",
+        "Do not guess price"
+      ],
+      "staffRisk": "Wrong price damages trust and margin."
+    },
+    {
+      "id": "ex_bottle_001",
+      "title": "Bottle add-on",
+      "ticket": "20 Wings / Mango Mayhem bottle",
+      "readAs": [
+        "Food item plus bottle add-on",
+        "Pack bottle visibly"
+      ],
+      "staffRisk": "Bottle can be missed if packed under food."
+    },
+    {
+      "id": "ex_delivery_001",
+      "title": "Delivery order",
+      "ticket": "Delivery / phone / address / notes",
+      "readAs": [
+        "Confirm phone",
+        "Confirm address",
+        "Confirm delivery note"
+      ],
+      "staffRisk": "Do not send driver without address."
+    }
+  ]
+}

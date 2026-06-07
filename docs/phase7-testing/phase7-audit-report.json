@@ -1,0 +1,31 @@
+{
+  "phase": "Phase 7 — Testing and QA package",
+  "status": "Prepared",
+  "createdAt": "2026-06-07T00:00:00+07:00",
+  "inputs_used": {
+    "phase3_data_exists": true,
+    "phase4_frontend_exists": true,
+    "phase5_backend_exists": true,
+    "phase6_staff_academy_exists": true,
+    "legacy_index_reference": "Uploaded index.js was available and previously identified as legacy reference; live execution not performed."
+  },
+  "not_run": [
+    "npm install",
+    "frontend npm build",
+    "backend npm install",
+    "Telegram live tests",
+    "staff group notification live test",
+    "deployment test"
+  ],
+  "static_verification": [
+    "Generated JSON parses",
+    "Required docs exist",
+    "Payload fixtures exist"
+  ],
+  "known_risks": [
+    "Real Telegram env vars still required",
+    "Menu base item prices may still require PRICE_REQUIRED_FROM_MENU handling",
+    "Khmer translations require human review",
+    "Heat point awarding must be verified live via staff status flow"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "systemName": "Wing⚡Boss Add-on Data",
+  "version": "phase3-app-ready-2026-06-07",
+  "sourceFiles": [
+    "WingBoss_TelegramBot_FlavorSystem_LOCKED_MASTER_MERGED_v1_2_FINAL_2026-06-07.json"
+  ],
+  "dependencyRules": {
+    "dipCups": "If customer selects a dip, bot must require dip flavor and size."
+  },
+  "addons": [
+    {
+      "id": "upgrade_3_for_1_rub_drizzle",
+      "code": "UPSELL_3_FOR_1",
+      "name": "3-for-$1 Rub/Drizzle Upgrade",
+      "category": "bundle_upgrade",
+      "price": 1.0,
+      "priceBasis": "per_serving",
+      "minSelect": 3,
+      "maxSelect": 3,
+      "allowedCodes": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "excludedCodes": [
+        "R6",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "available": true,
+      "translationKey": "addon.upgrade_3_for_1_rub_drizzle"
+    },
+    {
+      "id": "extra_sauce",
+      "code": "EXTRA_SAUCE",
+      "name": "Extra Sauce",
+      "category": "extra_sauce",
+      "price": 1.0,
+      "priceBasis": "per extra sauce/flavor choice",
+      "available": true,
+      "translationKey": "addon.extra_sauce"
+    },
+    {
+      "id": "no_extra_dip",
+      "code": "NO_DIP",
+      "name": "No Extra Dip",
+      "category": "dip",
+      "price": 0,
+      "available": true,
+      "translationKey": "addon.no_extra_dip"
+    },
+    {
+      "id": "dip_ranch_30ml",
+      "code": "DIP_RANCH_30ML",
+      "name": "Ranch 30ml",
+      "category": "dip",
+      "dipFlavor": "Ranch",
+      "size": "30ml",
+      "price": 0.75,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ranch_30ml"
+    },
+    {
+      "id": "dip_ranch_60ml",
+      "code": "DIP_RANCH_60ML",
+      "name": "Ranch 60ml",
+      "category": "dip",
+      "dipFlavor": "Ranch",
+      "size": "60ml",
+      "price": 1.4,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ranch_60ml"
+    },
+    {
+      "id": "dip_ranch_90ml",
+      "code": "DIP_RANCH_90ML",
+      "name": "Ranch 90ml",
+      "category": "dip",
+      "dipFlavor": "Ranch",
+      "size": "90ml",
+      "price": 2.0,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ranch_90ml"
+    },
+    {
+      "id": "dip_fireback_30ml",
+      "code": "DIP_FIREBACK_30ML",
+      "name": "Fireback 30ml",
+      "category": "dip",
+      "dipFlavor": "Fireback",
+      "size": "30ml",
+      "price": 0.75,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_fireback_30ml"
+    },
+    {
+      "id": "dip_fireback_60ml",
+      "code": "DIP_FIREBACK_60ML",
+      "name": "Fireback 60ml",
+      "category": "dip",
+      "dipFlavor": "Fireback",
+      "size": "60ml",
+      "price": 1.4,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_fireback_60ml"
+    },
+    {
+      "id": "dip_fireback_90ml",
+      "code": "DIP_FIREBACK_90ML",
+      "name": "Fireback 90ml",
+      "category": "dip",
+      "dipFlavor": "Fireback",
+      "size": "90ml",
+      "price": 2.0,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_fireback_90ml"
+    },
+    {
+      "id": "dip_bbq_30ml",
+      "code": "DIP_BBQ_30ML",
+      "name": "BBQ 30ml",
+      "category": "dip",
+      "dipFlavor": "BBQ",
+      "size": "30ml",
+      "price": 0.75,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_bbq_30ml"
+    },
+    {
+      "id": "dip_bbq_60ml",
+      "code": "DIP_BBQ_60ML",
+      "name": "BBQ 60ml",
+      "category": "dip",
+      "dipFlavor": "BBQ",
+      "size": "60ml",
+      "price": 1.4,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_bbq_60ml"
+    },
+    {
+      "id": "dip_bbq_90ml",
+      "code": "DIP_BBQ_90ML",
+      "name": "BBQ 90ml",
+      "category": "dip",
+      "dipFlavor": "BBQ",
+      "size": "90ml",
+      "price": 2.0,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_bbq_90ml"
+    },
+    {
+      "id": "dip_ketchup_30ml",
+      "code": "DIP_KETCHUP_30ML",
+      "name": "Ketchup 30ml",
+      "category": "dip",
+      "dipFlavor": "Ketchup",
+      "size": "30ml",
+      "price": 0.75,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ketchup_30ml"
+    },
+    {
+      "id": "dip_ketchup_60ml",
+      "code": "DIP_KETCHUP_60ML",
+      "name": "Ketchup 60ml",
+      "category": "dip",
+      "dipFlavor": "Ketchup",
+      "size": "60ml",
+      "price": 1.4,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ketchup_60ml"
+    },
+    {
+      "id": "dip_ketchup_90ml",
+      "code": "DIP_KETCHUP_90ML",
+      "name": "Ketchup 90ml",
+      "category": "dip",
+      "dipFlavor": "Ketchup",
+      "size": "90ml",
+      "price": 2.0,
+      "priceBasis": "per_cup",
+      "available": true,
+      "translationKey": "addon.dip_ketchup_90ml"
+    },
+    {
+      "id": "hot_sauce_bottle_mango_mayhem",
+      "code": "BOTTLE_D5",
+      "name": "Mango Mayhem",
+      "shortName": null,
+      "category": "hot_sauce_bottle",
+      "size": "150ml",
+      "relatedDrizzle": "D5",
+      "price": 9.5,
+      "priceBasis": "per_bottle",
+      "available": true,
+      "excludedFromHeatRewardDiscounts": true,
+      "translationKey": "addon.hot_sauce_bottle_mango_mayhem"
+    },
+    {
+      "id": "hot_sauce_bottle_strawberry_armageddon",
+      "code": "BOTTLE_D6",
+      "name": "Strawberry Armageddon",
+      "shortName": "Str. Armageddon",
+      "category": "hot_sauce_bottle",
+      "size": "150ml",
+      "relatedDrizzle": "D6",
+      "price": 10.95,
+      "priceBasis": "per_bottle",
+      "available": true,
+      "excludedFromHeatRewardDiscounts": true,
+      "translationKey": "addon.hot_sauce_bottle_strawberry_armageddon"
+    },
+    {
+      "id": "extra_cheese_slice",
+      "code": "EXTRA_CHEESE_SLICE",
+      "name": "Extra Cheese Slice",
+      "category": "burger_add_on",
+      "price": 0.75,
+      "priceBasis": "per_selection",
+      "appliesTo": [
+        "B"
+      ],
+      "customerDescription": "Burger only. Adds one extra cheese slice.",
+      "available": true,
+      "translationKey": "addon.extra_cheese_slice"
+    }
+  ]
+}

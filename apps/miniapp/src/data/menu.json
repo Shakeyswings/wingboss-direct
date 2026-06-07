@@ -1,0 +1,189 @@
+{
+  "systemName": "Wing⚡Boss Telegram Mini App Menu Data",
+  "version": "phase3-app-ready-2026-06-07",
+  "sourceFiles": [
+    "WingBoss_TelegramBot_FlavorSystem_LOCKED_MASTER_MERGED_v1_2_FINAL_2026-06-07.json"
+  ],
+  "sourceStatus": "converted_from_uploaded_flavor_system_package_with_base_menu_placeholders",
+  "currency": "USD",
+  "currencyReference": {
+    "KHR_per_USD": 4100,
+    "display_currency": "USD",
+    "bot_may_display_KHR": true
+  },
+  "brandRules": {
+    "english_source_of_truth": true,
+    "localization_style": "Mirror meaning, do not translate literally.",
+    "flavor_names_stay_english": true,
+    "default_no_giveaway_rule": true
+  },
+  "globalLockedRules": {
+    "no_giveaway_default": "All upgrades default to none. No extra sauce, dry rub, drizzle, dip, premium hot sauce, cheese, heat upgrade, or bottle is included unless selected and charged.",
+    "wings_included_flavor_rule": "Customer can choose sauce OR dry rub with wings as included flavor choices.",
+    "upgrade_pricing_basis": "Rub, drizzle, premium hot sauce drizzle, Garlic Parmesan, and advanced premium upgrades are charged per serving unit, not per whole order.",
+    "serving_unit_definitions": {
+      "bone_in_wings": "6 wings = 1 serving",
+      "boneless": "8 boneless = 1 serving",
+      "burger": "1 burger = 1 serving",
+      "side": "1 side item = 1 serving",
+      "combo_or_flavor_box": "1 box/combo = 1 serving unless manually adjusted by owner"
+    },
+    "staff_warning": "Do not let customers order 12, 24, or 36 wings and pay only one upgrade price unless owner approves."
+  },
+  "servingUnitPricing": {
+    "calculation_formula": "upgrade_total = upgrade_price_per_serving * serving_unit_count",
+    "serving_units": {
+      "bone_in_wings": {
+        "unit_quantity": 6,
+        "label_en": "per 6 wings",
+        "rounding_rule": "ceil(quantity / 6)"
+      },
+      "boneless": {
+        "unit_quantity": 8,
+        "label_en": "per 8 boneless",
+        "rounding_rule": "ceil(quantity / 8)"
+      },
+      "burger": {
+        "unit_quantity": 1,
+        "label_en": "per burger",
+        "rounding_rule": "quantity"
+      },
+      "side": {
+        "unit_quantity": 1,
+        "label_en": "per side item",
+        "rounding_rule": "quantity"
+      },
+      "combo_or_flavor_box": {
+        "unit_quantity": 1,
+        "label_en": "per box/combo",
+        "rounding_rule": "quantity",
+        "staff_note": "Owner may manually adjust if box is larger than standard serving."
+      }
+    }
+  },
+  "wingFlavorCountRules": {
+    "included_flavor_type": "Customer may choose sauce OR dry rub as included flavor choice.",
+    "flavor_count_by_item": [
+      {
+        "item_type": "bone_in_wings",
+        "quantity": 6,
+        "included_flavor_choices": 1
+      },
+      {
+        "item_type": "boneless",
+        "quantity": 8,
+        "included_flavor_choices": 1
+      },
+      {
+        "item_type": "bone_in_wings",
+        "quantity": 12,
+        "included_flavor_choices": 2
+      },
+      {
+        "item_type": "bone_in_wings",
+        "quantity": 24,
+        "included_flavor_choices": 3
+      },
+      {
+        "item_type": "bone_in_wings",
+        "quantity": 36,
+        "included_flavor_choices": 4
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "category_a",
+      "code": "A",
+      "name": "A Wings & Boneless",
+      "nameKhmer": "A Wings និង Boneless",
+      "sortOrder": 1,
+      "translationKey": "category.a"
+    },
+    {
+      "id": "category_b",
+      "code": "B",
+      "name": "B Burgers",
+      "nameKhmer": "B Burgers",
+      "sortOrder": 2,
+      "translationKey": "category.b"
+    },
+    {
+      "id": "category_c",
+      "code": "C",
+      "name": "C Sides",
+      "nameKhmer": "C Sides",
+      "sortOrder": 3,
+      "translationKey": "category.c"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_placeholder_a",
+      "code": "A_PLACEHOLDER",
+      "name": "A Wings & Boneless — ITEM_REQUIRED_FROM_MENU",
+      "categoryId": "category_a",
+      "step": 1,
+      "price": "PRICE_REQUIRED_FROM_MENU",
+      "available": true,
+      "requiresFlavor": true,
+      "requiredOptions": [
+        "flavor"
+      ],
+      "optionalOptions": [
+        "addons",
+        "heat",
+        "notes"
+      ],
+      "staffLabel": "A ITEM REQUIRED",
+      "customerDescription": "ITEM_DETAILS_REQUIRED_FROM_LATEST_MENU",
+      "translationKey": "item.placeholder_a",
+      "sourceNote": "The uploaded JSON package contains flavor/add-on system data, not full base item prices."
+    },
+    {
+      "id": "item_placeholder_b",
+      "code": "B_PLACEHOLDER",
+      "name": "B Burgers — ITEM_REQUIRED_FROM_MENU",
+      "categoryId": "category_b",
+      "step": 1,
+      "price": "PRICE_REQUIRED_FROM_MENU",
+      "available": true,
+      "requiresFlavor": false,
+      "requiredOptions": [],
+      "optionalOptions": [
+        "addons",
+        "heat",
+        "notes"
+      ],
+      "staffLabel": "B ITEM REQUIRED",
+      "customerDescription": "ITEM_DETAILS_REQUIRED_FROM_LATEST_MENU",
+      "translationKey": "item.placeholder_b",
+      "sourceNote": "The uploaded JSON package contains flavor/add-on system data, not full base item prices."
+    },
+    {
+      "id": "item_placeholder_c",
+      "code": "C_PLACEHOLDER",
+      "name": "C Sides — ITEM_REQUIRED_FROM_MENU",
+      "categoryId": "category_c",
+      "step": 1,
+      "price": "PRICE_REQUIRED_FROM_MENU",
+      "available": true,
+      "requiresFlavor": false,
+      "requiredOptions": [],
+      "optionalOptions": [
+        "addons",
+        "heat",
+        "notes"
+      ],
+      "staffLabel": "C ITEM REQUIRED",
+      "customerDescription": "ITEM_DETAILS_REQUIRED_FROM_LATEST_MENU",
+      "translationKey": "item.placeholder_c",
+      "sourceNote": "The uploaded JSON package contains flavor/add-on system data, not full base item prices."
+    }
+  ],
+  "pricePolicy": {
+    "doNotInventPrices": true,
+    "missingPriceToken": "PRICE_REQUIRED_FROM_MENU",
+    "baseItemPricesStatus": "PRICE_REQUIRED_FROM_MENU"
+  }
+}

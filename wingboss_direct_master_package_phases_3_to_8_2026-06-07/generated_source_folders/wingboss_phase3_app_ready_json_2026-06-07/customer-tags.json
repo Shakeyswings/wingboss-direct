@@ -1,0 +1,149 @@
+{
+  "systemName": "Wing⚡Boss Customer Tags and Heat Profile",
+  "version": "phase3-app-ready-2026-06-07",
+  "privacyRules": [
+    "Telegram ID only for customer profile linkage.",
+    "No payment card data.",
+    "No IP tracking.",
+    "No device fingerprinting."
+  ],
+  "profileFields": {
+    "telegram_id": {
+      "type": "string_or_number"
+    },
+    "language": {
+      "default": "en"
+    },
+    "last_order_id": {
+      "type": "string_or_null"
+    },
+    "favorite_flavors": {
+      "type": "array"
+    },
+    "customer_tags": {
+      "type": "array",
+      "allowedValues": [
+        "repeat_customer",
+        "delivery_customer",
+        "pickup_customer",
+        "spicy_customer",
+        "advanced_menu_user",
+        "needs_confirmation",
+        "bottle_buyer",
+        "heat_reward_user"
+      ]
+    },
+    "heat_points_available": {
+      "type": "integer",
+      "default": 0
+    },
+    "heat_points_lifetime": {
+      "type": "integer",
+      "default": 0
+    },
+    "heat_spend_lifetime_usd": {
+      "type": "number",
+      "default": 0
+    },
+    "heat_points_redeemed_total": {
+      "type": "integer",
+      "default": 0
+    },
+    "max_heat_level_reached": {
+      "type": "string",
+      "default": "original"
+    },
+    "bottles_purchased_count": {
+      "type": "object",
+      "default": {
+        "strawberry_armageddon": 0,
+        "mango_mayhem": 0
+      }
+    },
+    "last_redeem_at": {
+      "type": "string_or_null",
+      "default": null
+    },
+    "completed_orders": {
+      "type": "integer",
+      "default": 0
+    },
+    "lifetime_spend_usd": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "rewardEligibility": {
+    "minCompletedOrders": 2,
+    "orMinLifetimeSpendUsd": 10,
+    "cooldownDays": 7
+  },
+  "rewardLadder": [
+    {
+      "points": 500,
+      "rewardId": "free_30ml_dip",
+      "label": "Free 30ml Dip",
+      "appliesTo": "food_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 1000,
+      "rewardId": "two_off_wings",
+      "label": "$2 Off Wings",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 2000,
+      "rewardId": "fries_or_three_off_wings",
+      "label": "Free Regular Fries OR $3 Off Wings",
+      "appliesTo": "food_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 3500,
+      "rewardId": "five_off_wings",
+      "label": "$5 Off Wings",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 10000,
+      "rewardId": "free_12_classic_original",
+      "label": "Free 12 Classic Wings — Original heat only",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles",
+        "paid_heat_upgrades"
+      ]
+    },
+    {
+      "points": 20000,
+      "rewardId": "free_hot_sauce_bottle",
+      "label": "Free Hot Sauce Bottle — Strawberry Armageddon or Mango Mayhem",
+      "appliesTo": "hot_sauce_bottle_reward_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol"
+      ]
+    }
+  ]
+}

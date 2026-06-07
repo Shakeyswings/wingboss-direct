@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-06-07",
+  "status": "passed",
+  "checkedFiles": [
+    "README.md",
+    "backend-deployment-guide.md",
+    "botfather-miniapp-setup.md",
+    "command-cheat-sheet.md",
+    "daily-ops-sop.md",
+    "frontend-deployment-guide.md",
+    "implementation-guide.md",
+    "launch-checklist.json",
+    "live-test-script.md",
+    "menu-update-procedure.md",
+    "phase8-audit-report.json",
+    "project-status.json",
+    "rollback-plan.md",
+    "security-privacy-checklist.md",
+    "termux-setup.md"
+  ],
+  "errors": []
+}

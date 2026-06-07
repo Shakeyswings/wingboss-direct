@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WingBossTelegramMiniAppOrder",
+  "type": "object",
+  "required": [
+    "orderId",
+    "createdAt",
+    "source",
+    "customer",
+    "orderType",
+    "items",
+    "pricing",
+    "validation",
+    "status"
+  ],
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "source": {
+      "const": "telegram_mini_app"
+    },
+    "telegramUser": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "username": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "firstName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "customer": {
+      "type": "object",
+      "required": [
+        "name",
+        "phone"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "orderType": {
+      "enum": [
+        "pickup",
+        "delivery"
+      ]
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "deliveryNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "lineId",
+          "itemId",
+          "itemName",
+          "quantity"
+        ],
+        "properties": {
+          "lineId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemName": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "basePrice": {},
+          "flavor": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "addons": {
+            "type": "array"
+          },
+          "heat": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "heatScore": {
+            "type": [
+              "number",
+              "integer"
+            ]
+          },
+          "heatSpendUsd": {
+            "type": "number"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "heatEconomy": {
+      "type": "object",
+      "properties": {
+        "currentOrderHeatSpendUsd": {
+          "type": "number"
+        },
+        "currentOrderHeatScore": {
+          "type": "integer"
+        },
+        "redeemedRewardId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "redeemedPoints": {
+          "type": "integer"
+        },
+        "pointsEarnedPreview": {
+          "type": "integer"
+        },
+        "bottleTriggerShown": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": [
+        "verified",
+        "total",
+        "currency",
+        "issues"
+      ],
+      "properties": {
+        "verified": {
+          "type": "boolean"
+        },
+        "subtotal": {},
+        "deliveryFee": {},
+        "total": {},
+        "currency": {
+          "type": "string"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "isValid",
+        "blockingIssues",
+        "staffReviewIssues"
+      ],
+      "properties": {
+        "isValid": {
+          "type": "boolean"
+        },
+        "blockingIssues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "staffReviewIssues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "submitted",
+        "staff_review",
+        "confirmed",
+        "need_info",
+        "paid",
+        "completed",
+        "cancelled",
+        "refunded"
+      ]
+    }
+  }
+}

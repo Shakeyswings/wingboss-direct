@@ -1,0 +1,23 @@
+{
+  "phase": "Phase 8 — Final Implementation Instructions",
+  "generatedAt": "2026-06-07",
+  "status": "Prepared",
+  "deploymentAttempted": false,
+  "liveTelegramTestRun": false,
+  "npmInstallRun": false,
+  "frontendBuildRun": false,
+  "backendRuntimeTestRun": false,
+  "notes": [
+    "This package is an operator-ready implementation guide, not proof of deployment.",
+    "Use Phase 4 frontend ZIP and Phase 5 backend ZIP as source packages.",
+    "Do not expose BOT_TOKEN, STAFF_GROUP_ID, OWNER_TELEGRAM_ID, or STAFF_TELEGRAM_IDS in frontend code.",
+    "Heat Points must be awarded only after paid + completed + not refunded."
+  ],
+  "sourcePackages": {
+    "phase3Data": "wingboss_phase3_app_ready_json_2026-06-07.zip",
+    "phase4Frontend": "wingboss_phase4_tma_frontend_2026-06-07.zip",
+    "phase5Backend": "wingboss_phase5_bot_backend_2026-06-07.zip",
+    "phase6StaffAcademy": "wingboss_phase6_staff_academy_sop_2026-06-07.zip",
+    "phase7QA": "wingboss_phase7_testing_qa_package_2026-06-07.zip"
+  }
+}

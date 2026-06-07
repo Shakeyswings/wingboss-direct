@@ -1,0 +1,42 @@
+{
+  "package": "WingBoss Phase 7 Security QA Checklist",
+  "status": "Prepared",
+  "execution_status": "Not run",
+  "checks": [
+    {
+      "id": "SEC-001",
+      "test": "Search frontend build/source for BOT_TOKEN and bot token-like strings",
+      "expected": "No token found"
+    },
+    {
+      "id": "SEC-002",
+      "test": "Search frontend for STAFF_GROUP_ID and OWNER_TELEGRAM_ID",
+      "expected": "Not present unless documented as non-secret display data"
+    },
+    {
+      "id": "SEC-003",
+      "test": "Submit note with <b>bold</b> [link](tg://evil) and control characters",
+      "expected": "Sanitized or escaped in staff summary"
+    },
+    {
+      "id": "SEC-004",
+      "test": "Non-staff user attempts staff status callback",
+      "expected": "Rejected"
+    },
+    {
+      "id": "SEC-005",
+      "test": "Oversized payload/order notes",
+      "expected": "Rejected or truncated safely"
+    },
+    {
+      "id": "SEC-006",
+      "test": "Malformed JSON web_app_data",
+      "expected": "Rejected without crash"
+    },
+    {
+      "id": "SEC-007",
+      "test": "Customer data storage reviewed",
+      "expected": "Only necessary name, phone, Telegram ID, order details stored"
+    }
+  ]
+}

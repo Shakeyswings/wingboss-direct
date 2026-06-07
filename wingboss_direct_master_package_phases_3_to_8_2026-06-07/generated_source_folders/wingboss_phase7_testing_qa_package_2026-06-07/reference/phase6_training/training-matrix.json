@@ -1,0 +1,95 @@
+{
+  "systemName": "Wing⚡Boss Staff Training Matrix",
+  "version": "phase6-2026-06-07",
+  "roles": [
+    {
+      "role": "cook",
+      "requiredCategories": [
+        "order_reading",
+        "sauce_vs_dry_rub",
+        "heat_system",
+        "add_ons_drizzles_dips",
+        "packaging",
+        "missing_information",
+        "payment_dispatch"
+      ]
+    },
+    {
+      "role": "runner",
+      "requiredCategories": [
+        "order_reading",
+        "packaging",
+        "customer_confirmation",
+        "missing_information",
+        "unavailable_items"
+      ]
+    },
+    {
+      "role": "bartender_cashier",
+      "requiredCategories": [
+        "customer_confirmation",
+        "payment_dispatch",
+        "direct_orders",
+        "missing_information",
+        "unavailable_items"
+      ]
+    },
+    {
+      "role": "owner_admin",
+      "requiredCategories": [
+        "all"
+      ]
+    }
+  ],
+  "dailyTrainingPlan": [
+    {
+      "day": 1,
+      "focus": "Order Reading",
+      "categoryId": "order_reading",
+      "targetMinutes": 5
+    },
+    {
+      "day": 2,
+      "focus": "Sauce vs Dry Rub",
+      "categoryId": "sauce_vs_dry_rub",
+      "targetMinutes": 5
+    },
+    {
+      "day": 3,
+      "focus": "Heat System",
+      "categoryId": "heat_system",
+      "targetMinutes": 5
+    },
+    {
+      "day": 4,
+      "focus": "Add-ons, Drizzles, Dips",
+      "categoryId": "add_ons_drizzles_dips",
+      "targetMinutes": 5
+    },
+    {
+      "day": 5,
+      "focus": "Packaging",
+      "categoryId": "packaging",
+      "targetMinutes": 5
+    },
+    {
+      "day": 6,
+      "focus": "Customer Confirmation",
+      "categoryId": "customer_confirmation",
+      "targetMinutes": 5
+    },
+    {
+      "day": 7,
+      "focus": "Missing Information",
+      "categoryId": "missing_information",
+      "targetMinutes": 5
+    }
+  ],
+  "completionStatusValues": [
+    "not_started",
+    "reviewed",
+    "passed_quick_check",
+    "needs_retraining"
+  ],
+  "khmerReviewRequired": true
+}

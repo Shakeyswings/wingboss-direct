@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-06-07T05:41:33.792351",
+  "jsonFiles": [
+    "staff-academy-expanded.json",
+    "sop-checklists.json",
+    "customer-clarification-scripts.json",
+    "order-reading-examples.json",
+    "staff-quiz-bank.json",
+    "training-matrix.json",
+    "phase6-audit-report.json",
+    "reference_phase3_data/staff-academy.json",
+    "reference_phase3_data/menu.json",
+    "reference_phase3_data/flavors.json",
+    "reference_phase3_data/addons.json",
+    "reference_phase3_data/heat-system.json",
+    "reference_phase3_data/translations.json",
+    "reference_phase3_data/customer-tags.json",
+    "reference_phase3_data/order-schema.json"
+  ],
+  "ok": true,
+  "errors": []
+}

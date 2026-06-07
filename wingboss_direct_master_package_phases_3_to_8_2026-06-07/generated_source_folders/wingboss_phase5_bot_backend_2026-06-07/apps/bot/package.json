@@ -1,0 +1,19 @@
+{
+  "name": "wingboss-tma-bot-backend",
+  "version": "2026.06.07-phase5",
+  "description": "WingBoss Direct Telegram bot backend for TMA orders, staff dispatch, and Heat Economy rules.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "verify": "node scripts/verify-phase5.js",
+    "check": "node --check src/index.js && node --check scripts/verify-phase5.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "package": "WingBoss Heat Economy QA Spec",
+  "version": "2026-06-07",
+  "status": "Prepared",
+  "execution_status": "Not run",
+  "locked_rules": {
+    "points_per_usd": 100,
+    "earning_condition": [
+      "order paymentStatus = paid",
+      "order fulfillmentStatus = completed",
+      "order refunded = false"
+    ],
+    "redemption_flow": "manual selector before payment step",
+    "cooldown_days": 7,
+    "eligibility": "at least 2 completed orders OR at least $10 lifetime spend",
+    "reward_scope": "food only; not delivery, alcohol, or hot sauce bottles",
+    "non_stackable": [
+      "first-time 10% discount"
+    ],
+    "price_source": "Use heat-system.json locked heat upgrade prices; bottle prices must come from uploaded JSON/app data when present."
+  },
+  "calculation_cases": [
+    {
+      "case": "Hot only",
+      "heatSpendUsd": 0.25,
+      "expectedPoints": 25
+    },
+    {
+      "case": "Spicy + Hot Honey",
+      "heatSpendUsd": 1.0,
+      "expectedPoints": 100
+    },
+    {
+      "case": "Nuclear + Extreme Honey",
+      "heatSpendUsd": 2.5,
+      "expectedPoints": 250
+    },
+    {
+      "case": "Threshold bottle prompt",
+      "heatSpendUsd": 4.0,
+      "expectedPoints": 400,
+      "expectedBottlePrompt": true
+    }
+  ],
+  "status_transition_cases": [
+    {
+      "from": "submitted",
+      "to": "confirmed_paid",
+      "expected": "no points until completed"
+    },
+    {
+      "from": "confirmed_paid",
+      "to": "completed",
+      "expected": "award points once"
+    },
+    {
+      "from": "completed",
+      "to": "completed again",
+      "expected": "no duplicate award"
+    },
+    {
+      "from": "completed",
+      "to": "refunded",
+      "expected": "points reversed or no new points; verify configured behavior"
+    }
+  ]
+}

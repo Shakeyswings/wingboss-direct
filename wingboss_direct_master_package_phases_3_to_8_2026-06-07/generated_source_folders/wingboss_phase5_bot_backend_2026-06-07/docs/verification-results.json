@@ -1,0 +1,17 @@
+{
+  "node_check_index": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "node_check_verify": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "verify_phase5": {
+    "returncode": 0,
+    "stdout": "Phase 5 verification passed: required files exist and JSON parses.\n",
+    "stderr": ""
+  }
+}

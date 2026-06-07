@@ -1,0 +1,743 @@
+{
+  "systemName": "Wing⚡Boss Staff Academy Expanded SOP System",
+  "version": "phase6-2026-06-07",
+  "status": "prepared",
+  "sourceFiles": [
+    "phase3 staff-academy.json",
+    "phase3 heat-system.json",
+    "phase5 backend package",
+    "legacy index.js reference"
+  ],
+  "sourceOfTruth": "English",
+  "khmerStatus": "KHMER_TRANSLATION_REQUIRED_FOR_ALL_LESSONS",
+  "academyRules": [
+    "Lessons must stay short enough for service-time review.",
+    "English is the source of truth.",
+    "Khmer text must be reviewed before live staff use.",
+    "Do not start cooking if required order information is missing.",
+    "Do not invent prices when PRICE_REQUIRED_FROM_MENU appears.",
+    "Heat Points are earned only after paid, completed, not refunded orders."
+  ],
+  "categories": [
+    {
+      "id": "order_reading",
+      "name": "Order Reading",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 1
+    },
+    {
+      "id": "sauce_vs_dry_rub",
+      "name": "Sauce vs Dry Rub",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 2
+    },
+    {
+      "id": "heat_system",
+      "name": "Heat System",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 3
+    },
+    {
+      "id": "add_ons_drizzles_dips",
+      "name": "Add-ons, Drizzles, Dips",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 4
+    },
+    {
+      "id": "packaging",
+      "name": "Packaging",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 5
+    },
+    {
+      "id": "customer_confirmation",
+      "name": "Customer Confirmation",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 6
+    },
+    {
+      "id": "missing_information",
+      "name": "Missing Information",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 7
+    },
+    {
+      "id": "unavailable_items",
+      "name": "Unavailable Items",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 8
+    },
+    {
+      "id": "payment_dispatch",
+      "name": "Payment and Staff Dispatch",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 9
+    },
+    {
+      "id": "cleaning_safety",
+      "name": "Cleaning and Safety",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 10
+    },
+    {
+      "id": "direct_orders",
+      "name": "Telegram Direct Orders",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "priority": 11
+    }
+  ],
+  "lessons": [
+    {
+      "id": "L001",
+      "categoryId": "order_reading",
+      "title": "Read the 3-step order first",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Every direct order must be read in this order: item, flavor, then add-ons. Do not start cooking until those three parts are clear.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "12 wings + Buffalo + Ranch 60ml",
+      "staffAction": "Check item, quantity, flavor, heat, and add-ons before cooking.",
+      "commonMistake": "Starting the fryer before checking the flavor.",
+      "quickCheckQuestion": "What are the first three parts to check?",
+      "quickCheckAnswer": "Item, flavor, add-ons.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "order",
+        "kitchen"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L002",
+      "categoryId": "order_reading",
+      "title": "Check quantity and serving units",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Wing counts affect flavor limits, serving units, sauce amount, rub amount, and drizzle amount. Always check the count before preparing sauce or rub.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "20 wings + 2 flavors + drizzle",
+      "staffAction": "Confirm wing count before portioning sauce, rub, or drizzle.",
+      "commonMistake": "Using a 6-wing sauce portion for a 12-wing order.",
+      "quickCheckQuestion": "Why do we check quantity first?",
+      "quickCheckAnswer": "Because quantity controls portions and flavor limits.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "portioning"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L003",
+      "categoryId": "order_reading",
+      "title": "Advanced flavor numbers matter",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Advanced customers may order by number. The number is part of the order and helps staff avoid confusing similar flavor names.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "#53 Orion + 12 wings",
+      "staffAction": "Use the number and name together when reading the ticket.",
+      "commonMistake": "Reading only the name and missing the formula.",
+      "quickCheckQuestion": "What should staff read for advanced flavors?",
+      "quickCheckAnswer": "Both the number and the flavor name.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "advanced",
+        "numbers"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L004",
+      "categoryId": "sauce_vs_dry_rub",
+      "title": "Sauce and dry rub are not the same",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Sauce means wet coating. Dry rub means seasoning powder. Do not swap them.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "12 wings + Buffalo Dust dry rub",
+      "staffAction": "Confirm whether the selected flavor is sauce or dry rub before tossing.",
+      "commonMistake": "Adding wet sauce when the ticket says dry rub.",
+      "quickCheckQuestion": "What is the difference?",
+      "quickCheckAnswer": "Sauce is wet coating; dry rub is seasoning powder.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "dry_rub",
+        "sauce"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L005",
+      "categoryId": "sauce_vs_dry_rub",
+      "title": "Dry rub marker must be visible",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Dry rub items must be clearly marked on staff tickets so the kitchen does not treat them like sauces.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "6 wings + Midnight Rub",
+      "staffAction": "Look for dry-rub type and staff label before prep.",
+      "commonMistake": "Missing the dry-rub label and using sauce.",
+      "quickCheckQuestion": "What marker should staff look for?",
+      "quickCheckAnswer": "The dry-rub type/staff label.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "dry_rub"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L006",
+      "categoryId": "heat_system",
+      "title": "Default heat is no added spice",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "If the customer does not choose a heat tier, use the default heat only. Do not add heat automatically.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "6 wings + BBQ + default heat",
+      "staffAction": "Prepare the flavor as ordered without extra heat.",
+      "commonMistake": "Adding hot sauce because the customer likes spicy food.",
+      "quickCheckQuestion": "What is the default heat?",
+      "quickCheckAnswer": "No added spice unless selected.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "heat"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L007",
+      "categoryId": "heat_system",
+      "title": "Heat upgrades must show clearly",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Heat modifiers affect the customer total, staff warning, and heat score. Staff must see the selected heat tier clearly.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "12 wings + Buffalo + Revenge",
+      "staffAction": "Confirm heat tier before cooking and before packing.",
+      "commonMistake": "Preparing Original heat when the ticket says Revenge.",
+      "quickCheckQuestion": "When do we confirm heat?",
+      "quickCheckAnswer": "Before cooking and before packing.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "heat",
+        "pricing"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L008",
+      "categoryId": "heat_system",
+      "title": "Nuclear is restricted",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Nuclear must only be used when the active menu rules allow it. If unsure, ask owner before cooking.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Advanced flavor + Nuclear",
+      "staffAction": "Do not improvise Nuclear. Confirm availability and allowed base.",
+      "commonMistake": "Giving Nuclear on a regular dry rub or normal flavor without approval.",
+      "quickCheckQuestion": "What should staff do if Nuclear is unclear?",
+      "quickCheckAnswer": "Ask owner or manager before cooking.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "nuclear",
+        "heat"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L009",
+      "categoryId": "add_ons_drizzles_dips",
+      "title": "Add-ons are not free unless included",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Do not give extra sauce, rub, drizzle, dip, cheese, bottle, or heat upgrade unless selected and charged or explicitly included by the menu.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Burger + extra cheese",
+      "staffAction": "Check add-ons line before packing.",
+      "commonMistake": "Adding a free dip because the customer usually asks for one.",
+      "quickCheckQuestion": "When can staff include an add-on?",
+      "quickCheckAnswer": "Only when selected, charged, or explicitly included.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "margin",
+        "addons"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L010",
+      "categoryId": "add_ons_drizzles_dips",
+      "title": "Drizzle goes last",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Sauce first, dry rub second, drizzle last. This preserves flavor clarity and makes the ticket easier to execute.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Wings + dry rub + Hot Honey drizzle",
+      "staffAction": "Follow the prep order exactly.",
+      "commonMistake": "Adding drizzle before dry rub.",
+      "quickCheckQuestion": "What is the correct prep order?",
+      "quickCheckAnswer": "Sauce first, dry rub second, drizzle last.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "drizzle",
+        "prep"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L011",
+      "categoryId": "packaging",
+      "title": "Use a final pack check",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Before handoff, check item, flavor, add-ons, dips, drink, napkins, and customer name.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Delivery order with Ranch 60ml",
+      "staffAction": "Use the packing checklist before giving order to customer or driver.",
+      "commonMistake": "Forgetting paid dip cups.",
+      "quickCheckQuestion": "What must be checked before handoff?",
+      "quickCheckAnswer": "Item, flavor, add-ons, dips, drink, napkins, customer name.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "packaging"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L012",
+      "categoryId": "packaging",
+      "title": "Separate hot sauce bottles from hot food",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Bottled hot sauce should be packed safely and visibly, not buried under hot food where it can be missed or damaged.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Wings + Mango Mayhem bottle",
+      "staffAction": "Pack bottle separately or visibly in the bag.",
+      "commonMistake": "Putting bottle under fries or wings.",
+      "quickCheckQuestion": "Where should a bottle go?",
+      "quickCheckAnswer": "Separate or clearly visible.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "bottles",
+        "packaging"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L013",
+      "categoryId": "customer_confirmation",
+      "title": "Confirm missing information before cooking",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "If phone, address, flavor, item, or payment proof is missing, do not start cooking. Ask the customer first.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Delivery order with no address",
+      "staffAction": "Send the short confirmation script and wait for reply.",
+      "commonMistake": "Guessing the address or flavor.",
+      "quickCheckQuestion": "What do we do when key info is missing?",
+      "quickCheckAnswer": "Ask first; do not cook yet.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "confirmation"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L014",
+      "categoryId": "missing_information",
+      "title": "Missing price means staff confirms total",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "If the app says Staff will confirm, staff must confirm total before final payment/cooking. Do not invent price.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Order with PRICE_REQUIRED_FROM_MENU",
+      "staffAction": "Escalate to owner or use current printed menu before confirming.",
+      "commonMistake": "Charging a guessed price.",
+      "quickCheckQuestion": "What does PRICE_REQUIRED_FROM_MENU mean?",
+      "quickCheckAnswer": "Do not guess; staff or owner must confirm.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "pricing"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L015",
+      "categoryId": "unavailable_items",
+      "title": "Out of stock can come back later",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Unavailable does not mean deleted. Offer a replacement and keep the customer conversation simple.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Customer orders unavailable #65",
+      "staffAction": "Say it is unavailable today and offer closest replacement.",
+      "commonMistake": "Telling customer it is gone forever.",
+      "quickCheckQuestion": "What should staff say for unavailable items?",
+      "quickCheckAnswer": "Unavailable today; offer replacement.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "availability"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L016",
+      "categoryId": "payment_dispatch",
+      "title": "Pay first before cooking",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "For bank transfer orders, staff should wait for payment proof before cooking or dispatching to kitchen.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Bank transfer order, no photo",
+      "staffAction": "Ask for payment proof photo before staff dispatch.",
+      "commonMistake": "Cooking before payment proof when pay-first rule applies.",
+      "quickCheckQuestion": "When can staff dispatch bank-transfer orders?",
+      "quickCheckAnswer": "After payment proof is received.",
+      "severity": "critical",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "payment"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L017",
+      "categoryId": "direct_orders",
+      "title": "Direct order is about clarity, not arguing with apps",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "Use direct-order language that sounds helpful: faster reorder, clearer customization, staff confirmation. Do not insult delivery apps to customers.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "Customer asks why Telegram",
+      "staffAction": "Explain direct order is faster for repeat orders and easier for customizations.",
+      "commonMistake": "Saying delivery apps are bad or blaming the customer.",
+      "quickCheckQuestion": "What is the safe direct-order message?",
+      "quickCheckAnswer": "Faster reorder, clearer customization, staff confirms directly.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "direct",
+        "customer"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    },
+    {
+      "id": "L018",
+      "categoryId": "cleaning_safety",
+      "title": "Clean and reset after rush",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "english": "After a rush, reset sauce area, dry rub area, packaging area, and order screen before next order.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "exampleOrder": "After 8 orders in a row",
+      "staffAction": "Clean spills, close containers, check low stock, and reset tools.",
+      "commonMistake": "Leaving sauce lids open and confusing rub spoons.",
+      "quickCheckQuestion": "What areas reset after rush?",
+      "quickCheckAnswer": "Sauce, dry rub, packaging, and order screen.",
+      "severity": "normal",
+      "estimatedTimeSeconds": 45,
+      "tags": [
+        "cleaning"
+      ],
+      "active": true,
+      "sourceOfTruth": "English"
+    }
+  ],
+  "quickQuizBank": [
+    {
+      "id": "Q_L001",
+      "lessonId": "L001",
+      "categoryId": "order_reading",
+      "question": "What are the first three parts to check?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Item, flavor, add-ons.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L002",
+      "lessonId": "L002",
+      "categoryId": "order_reading",
+      "question": "Why do we check quantity first?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Because quantity controls portions and flavor limits.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L003",
+      "lessonId": "L003",
+      "categoryId": "order_reading",
+      "question": "What should staff read for advanced flavors?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Both the number and the flavor name.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L004",
+      "lessonId": "L004",
+      "categoryId": "sauce_vs_dry_rub",
+      "question": "What is the difference?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce is wet coating; dry rub is seasoning powder.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L005",
+      "lessonId": "L005",
+      "categoryId": "sauce_vs_dry_rub",
+      "question": "What marker should staff look for?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "The dry-rub type/staff label.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L006",
+      "lessonId": "L006",
+      "categoryId": "heat_system",
+      "question": "What is the default heat?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "No added spice unless selected.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L007",
+      "lessonId": "L007",
+      "categoryId": "heat_system",
+      "question": "When do we confirm heat?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Before cooking and before packing.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L008",
+      "lessonId": "L008",
+      "categoryId": "heat_system",
+      "question": "What should staff do if Nuclear is unclear?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Ask owner or manager before cooking.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L009",
+      "lessonId": "L009",
+      "categoryId": "add_ons_drizzles_dips",
+      "question": "When can staff include an add-on?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Only when selected, charged, or explicitly included.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L010",
+      "lessonId": "L010",
+      "categoryId": "add_ons_drizzles_dips",
+      "question": "What is the correct prep order?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce first, dry rub second, drizzle last.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L011",
+      "lessonId": "L011",
+      "categoryId": "packaging",
+      "question": "What must be checked before handoff?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Item, flavor, add-ons, dips, drink, napkins, customer name.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L012",
+      "lessonId": "L012",
+      "categoryId": "packaging",
+      "question": "Where should a bottle go?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Separate or clearly visible.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L013",
+      "lessonId": "L013",
+      "categoryId": "customer_confirmation",
+      "question": "What do we do when key info is missing?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Ask first; do not cook yet.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L014",
+      "lessonId": "L014",
+      "categoryId": "missing_information",
+      "question": "What does PRICE_REQUIRED_FROM_MENU mean?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Do not guess; staff or owner must confirm.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L015",
+      "lessonId": "L015",
+      "categoryId": "unavailable_items",
+      "question": "What should staff say for unavailable items?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Unavailable today; offer replacement.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L016",
+      "lessonId": "L016",
+      "categoryId": "payment_dispatch",
+      "question": "When can staff dispatch bank-transfer orders?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "After payment proof is received.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L017",
+      "lessonId": "L017",
+      "categoryId": "direct_orders",
+      "question": "What is the safe direct-order message?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Faster reorder, clearer customization, staff confirms directly.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L018",
+      "lessonId": "L018",
+      "categoryId": "cleaning_safety",
+      "question": "What areas reset after rush?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce, dry rub, packaging, and order screen.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    }
+  ],
+  "orderReadingExamples": [
+    {
+      "id": "ex_standard_001",
+      "title": "Standard sauce order",
+      "ticket": "12 Wings / Buffalo / Ranch 60ml",
+      "readAs": [
+        "Item: 12 Wings",
+        "Flavor: Buffalo sauce",
+        "Add-on: Ranch 60ml"
+      ],
+      "staffRisk": "Do not forget paid dip cup."
+    },
+    {
+      "id": "ex_dryrub_001",
+      "title": "Dry rub order",
+      "ticket": "6 Wings / Midnight Rub / No Sauce",
+      "readAs": [
+        "Item: 6 Wings",
+        "Flavor: Midnight Rub dry rub",
+        "Sauce: none unless separately selected"
+      ],
+      "staffRisk": "Do not add wet sauce."
+    },
+    {
+      "id": "ex_heat_001",
+      "title": "High heat order",
+      "ticket": "12 Wings / Firestorm / Revenge",
+      "readAs": [
+        "Item: 12 Wings",
+        "Flavor: Firestorm",
+        "Heat: Revenge"
+      ],
+      "staffRisk": "Confirm heat before cooking."
+    },
+    {
+      "id": "ex_missing_001",
+      "title": "Missing price order",
+      "ticket": "Item price: PRICE_REQUIRED_FROM_MENU",
+      "readAs": [
+        "Staff must confirm total",
+        "Do not guess price"
+      ],
+      "staffRisk": "Wrong price damages trust and margin."
+    },
+    {
+      "id": "ex_bottle_001",
+      "title": "Bottle add-on",
+      "ticket": "20 Wings / Mango Mayhem bottle",
+      "readAs": [
+        "Food item plus bottle add-on",
+        "Pack bottle visibly"
+      ],
+      "staffRisk": "Bottle can be missed if packed under food."
+    },
+    {
+      "id": "ex_delivery_001",
+      "title": "Delivery order",
+      "ticket": "Delivery / phone / address / notes",
+      "readAs": [
+        "Confirm phone",
+        "Confirm address",
+        "Confirm delivery note"
+      ],
+      "staffRisk": "Do not send driver without address."
+    }
+  ],
+  "checklistIds": [
+    "prep_before_cooking",
+    "sauce_dry_rub_execution",
+    "packaging_final_check",
+    "customer_clarification",
+    "shift_training"
+  ],
+  "scriptIds": [
+    "missing_flavor",
+    "missing_phone",
+    "missing_delivery_address",
+    "missing_price",
+    "unavailable_item",
+    "bank_proof_needed",
+    "direct_order_benefit",
+    "heat_confirmation"
+  ]
+}

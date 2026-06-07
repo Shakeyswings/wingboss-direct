@@ -1,0 +1,602 @@
+{
+  "package": "WingBoss Direct Phase 7 QA Manual Test Matrix",
+  "version": "2026-06-07",
+  "status": "Prepared",
+  "execution_status": "Not run",
+  "rules": [
+    "Do not mark a test Passed unless it was executed on the target environment.",
+    "Do not accept fake pricing. Missing prices must show Staff will confirm.",
+    "Heat Points are awarded only after paid + completed + not refunded.",
+    "Bot token, staff group ID, and admin IDs must not appear in frontend code.",
+    "Khmer placeholders are acceptable until manually translated/reviewed."
+  ],
+  "tests": [
+    {
+      "id": "QA-CUST-001",
+      "area": "customer_order",
+      "severity": "P1",
+      "title": "First-time customer can submit pickup order",
+      "preconditions": [
+        "Frontend opened inside Telegram Mini App",
+        "Bot backend running",
+        "Staff group configured"
+      ],
+      "steps": [
+        "Tap Start Order",
+        "Select one available item",
+        "Select one available flavor",
+        "Select pickup",
+        "Enter name and phone",
+        "Review order",
+        "Tap Send Order"
+      ],
+      "expected_result": [
+        "Order submits without crash",
+        "Customer receives short confirmation",
+        "Staff group receives kitchen summary",
+        "No fake total appears if price missing"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-002",
+      "area": "customer_order",
+      "severity": "P1",
+      "title": "Delivery order requires address",
+      "preconditions": [
+        "Frontend running"
+      ],
+      "steps": [
+        "Build any order",
+        "Choose Delivery",
+        "Leave address blank",
+        "Tap Send Order"
+      ],
+      "expected_result": [
+        "Submission is blocked",
+        "User sees delivery address required message"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-003",
+      "area": "customer_order",
+      "severity": "P1",
+      "title": "Missing flavor blocks order when flavor required",
+      "preconditions": [
+        "Frontend running",
+        "Menu item requires flavor"
+      ],
+      "steps": [
+        "Select item",
+        "Skip flavor",
+        "Go to review/send"
+      ],
+      "expected_result": [
+        "Submission blocked",
+        "User sees choose flavor message"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-004",
+      "area": "pricing",
+      "severity": "P1",
+      "title": "Missing price protection",
+      "preconditions": [
+        "At least one selected object has PRICE_REQUIRED_FROM_MENU"
+      ],
+      "steps": [
+        "Build order with missing-price item/addon",
+        "Review order"
+      ],
+      "expected_result": [
+        "Total displays Staff will confirm",
+        "Payload includes staffReviewIssues or pricing issues",
+        "No $0.00 or estimated price shown"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-005",
+      "area": "availability",
+      "severity": "P1",
+      "title": "Unavailable item cannot be selected",
+      "preconditions": [
+        "An item/flavor is marked available=false"
+      ],
+      "steps": [
+        "Open item/flavor list",
+        "Try to select unavailable option"
+      ],
+      "expected_result": [
+        "Unavailable option is disabled or blocked",
+        "Clear unavailable message appears"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-006",
+      "area": "reorder",
+      "severity": "P1",
+      "title": "Repeat customer reorders last order",
+      "preconditions": [
+        "localStorage contains last valid order"
+      ],
+      "steps": [
+        "Open app",
+        "Tap Order Again",
+        "Review previous order",
+        "Submit"
+      ],
+      "expected_result": [
+        "Order loads from localStorage",
+        "Current availability/prices are rechecked",
+        "Customer can edit before sending"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-007",
+      "area": "fallback",
+      "severity": "P1",
+      "title": "Opened outside Telegram shows safe fallback",
+      "preconditions": [
+        "Open frontend URL in normal browser"
+      ],
+      "steps": [
+        "Build order",
+        "Tap Send Order"
+      ],
+      "expected_result": [
+        "No false Telegram sent message",
+        "Copyable payload or fallback instruction is shown"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-008",
+      "area": "localization",
+      "severity": "P1",
+      "title": "Language selector uses fallback safely",
+      "preconditions": [
+        "translations.json loaded"
+      ],
+      "steps": [
+        "Switch each language",
+        "Open home/order/review/staff academy"
+      ],
+      "expected_result": [
+        "Missing translations fall back to English",
+        "No raw translation keys shown to customer"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-009",
+      "area": "mobile_ux",
+      "severity": "P1",
+      "title": "Mobile tap targets usable",
+      "preconditions": [
+        "Open on Android Telegram"
+      ],
+      "steps": [
+        "Navigate all order steps using thumb taps"
+      ],
+      "expected_result": [
+        "Primary buttons are easy to tap",
+        "No hidden required controls",
+        "No horizontal overflow"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-CUST-010",
+      "area": "slow_internet",
+      "severity": "P1",
+      "title": "Slow internet graceful behavior",
+      "preconditions": [
+        "Throttle network or simulate slow connection"
+      ],
+      "steps": [
+        "Open app",
+        "Navigate order flow",
+        "Submit"
+      ],
+      "expected_result": [
+        "Data loads or clear error appears",
+        "No blank screen without recovery path"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-BOT-001",
+      "area": "bot",
+      "severity": "P1",
+      "title": "Bot /start opens Mini App button",
+      "preconditions": [
+        "BOT_TOKEN configured",
+        "MINI_APP_URL configured",
+        "Bot running"
+      ],
+      "steps": [
+        "Send /start to bot"
+      ],
+      "expected_result": [
+        "Bot responds with customer entry and Mini App launch button"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-BOT-002",
+      "area": "bot",
+      "severity": "P1",
+      "title": "Bot receives valid TMA payload",
+      "preconditions": [
+        "Bot running",
+        "Valid payload fixture available"
+      ],
+      "steps": [
+        "Submit order from Mini App or inject fixture via test harness"
+      ],
+      "expected_result": [
+        "Payload parsed",
+        "Order ID generated",
+        "Customer confirmation sent",
+        "Staff summary sent"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-BOT-003",
+      "area": "bot",
+      "severity": "P1",
+      "title": "Malformed payload rejected",
+      "preconditions": [
+        "Bot running"
+      ],
+      "steps": [
+        "Send malformed web_app_data payload"
+      ],
+      "expected_result": [
+        "Bot rejects safely",
+        "No staff order created",
+        "No crash"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-BOT-004",
+      "area": "bot",
+      "severity": "P1",
+      "title": "Staff group kitchen summary format",
+      "preconditions": [
+        "Staff group configured"
+      ],
+      "steps": [
+        "Submit valid order"
+      ],
+      "expected_result": [
+        "Message includes Order ID, Customer, Phone, Type, ITEMS, KITCHEN CHECK, ISSUES",
+        "No marketing copy in staff summary"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-BOT-005",
+      "area": "bot",
+      "severity": "P1",
+      "title": "Admin/staff callback protection",
+      "preconditions": [
+        "Bot running",
+        "Non-staff Telegram user available"
+      ],
+      "steps": [
+        "Non-staff user taps staff status button or uses staff command"
+      ],
+      "expected_result": [
+        "Action rejected",
+        "Order status not changed"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-001",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Heat meter visible before heat selected",
+      "preconditions": [
+        "Frontend running"
+      ],
+      "steps": [
+        "Start order",
+        "Reach review/cart"
+      ],
+      "expected_result": [
+        "Heat meter appears dim/zero state",
+        "No confusion with required payment"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-002",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Heat spend calculates from locked upgrade prices",
+      "preconditions": [
+        "heat-system.json loaded"
+      ],
+      "steps": [
+        "Select Hot",
+        "Review heat spend",
+        "Select Spicy Honey",
+        "Review heat spend"
+      ],
+      "expected_result": [
+        "Hot = $0.25 / 25 pts",
+        "Spicy Honey = $0.75 / 75 pts",
+        "Current order score matches spend*100"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-003",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Bottle suggestion appears at threshold",
+      "preconditions": [
+        "Heat spend threshold configured at $4 current order"
+      ],
+      "steps": [
+        "Build order with heat spend >= $4"
+      ],
+      "expected_result": [
+        "Bottle suggestion appears",
+        "User can continue without bottle",
+        "No aggressive copy"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-004",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Heat points not awarded on submit",
+      "preconditions": [
+        "Bot backend running"
+      ],
+      "steps": [
+        "Submit order but do not mark paid+completed"
+      ],
+      "expected_result": [
+        "Customer heat_points_available unchanged"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-005",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Heat points awarded only after paid+completed+not refunded",
+      "preconditions": [
+        "Bot backend running",
+        "Staff user authorized"
+      ],
+      "steps": [
+        "Submit order with heat spend",
+        "Mark paid/confirmed",
+        "Mark completed"
+      ],
+      "expected_result": [
+        "Heat points awarded once only",
+        "last/max heat fields update"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-006",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Refund prevents/reverses Heat Points",
+      "preconditions": [
+        "Completed paid order exists"
+      ],
+      "steps": [
+        "Mark order refunded or cancelled/refunded"
+      ],
+      "expected_result": [
+        "No new points awarded, or awarded points reversed according to backend rule",
+        "Audit log records status"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-HEAT-007",
+      "area": "heat_economy",
+      "severity": "P1",
+      "title": "Manual reward redemption cooldown/gates",
+      "preconditions": [
+        "Customer has enough points"
+      ],
+      "steps": [
+        "Attempt redeem with <2 orders and <$10 spend",
+        "Attempt redeem after eligible",
+        "Attempt second redemption within 7 days"
+      ],
+      "expected_result": [
+        "First blocked",
+        "Eligible redemption allowed",
+        "Cooldown blocks second redemption"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-STAFF-001",
+      "area": "staff_academy",
+      "severity": "P1",
+      "title": "Staff Academy opens and lessons display",
+      "preconditions": [
+        "Frontend running",
+        "staff-academy-expanded.json available"
+      ],
+      "steps": [
+        "Open Staff Academy",
+        "Open each category",
+        "Open a lesson"
+      ],
+      "expected_result": [
+        "Lesson title, English, Khmer placeholder, example, action, mistake, question display"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-STAFF-002",
+      "area": "staff_academy",
+      "severity": "P1",
+      "title": "SOP checklist matches staff summary",
+      "preconditions": [
+        "Staff order summary received"
+      ],
+      "steps": [
+        "Compare staff order fields with checklist"
+      ],
+      "expected_result": [
+        "Checklist covers item, flavor, add-ons, sauce/dry rub, packing, confirmation"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-STAFF-003",
+      "area": "staff_academy",
+      "severity": "P1",
+      "title": "Khmer placeholders are visible only where intended",
+      "preconditions": [
+        "Staff Academy open"
+      ],
+      "steps": [
+        "Review Khmer fields"
+      ],
+      "expected_result": [
+        "Untranslated fields show KHMER_TRANSLATION_REQUIRED or English fallback, not fake Khmer"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-SEC-001",
+      "area": "security",
+      "severity": "P1",
+      "title": "Frontend contains no bot token or staff group secret",
+      "preconditions": [
+        "Frontend source available"
+      ],
+      "steps": [
+        "Search for BOT_TOKEN, STAFF_GROUP_ID, OWNER_TELEGRAM_ID, -1003653716341"
+      ],
+      "expected_result": [
+        "No bot token in frontend",
+        "Staff group/admin IDs not bundled unless intentionally non-secret display copy"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    },
+    {
+      "id": "QA-SEC-002",
+      "area": "security",
+      "severity": "P1",
+      "title": "Customer notes sanitized",
+      "preconditions": [
+        "Bot running"
+      ],
+      "steps": [
+        "Submit note with HTML/Markdown/control characters",
+        "Review staff summary"
+      ],
+      "expected_result": [
+        "Note displays safely",
+        "No formatting injection",
+        "No crash"
+      ],
+      "automation_candidate": "manual",
+      "status": "Not run",
+      "actual_result": "",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "package": "WingBoss Phase 7 Integration Checklist",
+  "status": "Prepared",
+  "execution_status": "Not run",
+  "frontend_checks": [
+    "npm install",
+    "npm run build",
+    "Open in Telegram Mini App",
+    "Submit fixture order",
+    "Verify fallback outside Telegram",
+    "Search source for secrets"
+  ],
+  "backend_checks": [
+    "npm install",
+    "npm run check",
+    "npm run verify",
+    "Start polling locally",
+    "Send /start",
+    "Verify Mini App URL button",
+    "Inject valid web_app_data payload",
+    "Reject malformed payload",
+    "Send staff group notification"
+  ],
+  "data_checks": [
+    "All JSON parses",
+    "No unknown prices converted to zero",
+    "Unavailable flags honored",
+    "Heat system loaded",
+    "Staff Academy lessons render"
+  ],
+  "go_no_go_criteria": [
+    "Customer can submit pickup order",
+    "Customer can submit delivery order with address",
+    "Staff group receives readable summary",
+    "No fake total on missing price",
+    "Heat Points award only after paid+completed+not refunded",
+    "Admin/staff buttons protected",
+    "No secrets in frontend",
+    "Owner can stop launch if order summary is confusing"
+  ]
+}

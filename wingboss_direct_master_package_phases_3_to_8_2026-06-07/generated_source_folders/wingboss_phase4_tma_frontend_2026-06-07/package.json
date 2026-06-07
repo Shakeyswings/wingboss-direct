@@ -1,0 +1,12 @@
+{
+  "name": "wingboss-direct-phase4-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix apps/miniapp run dev",
+    "build": "npm --prefix apps/miniapp run build",
+    "preview": "npm --prefix apps/miniapp run preview"
+  },
+  "workspaces": [
+    "apps/miniapp"
+  ]
+}

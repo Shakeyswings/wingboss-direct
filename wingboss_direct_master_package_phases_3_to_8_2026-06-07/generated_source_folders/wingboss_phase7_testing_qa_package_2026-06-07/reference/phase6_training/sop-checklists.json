@@ -1,0 +1,101 @@
+{
+  "systemName": "Wing⚡Boss SOP Checklists",
+  "version": "phase6-2026-06-07",
+  "sourceOfTruth": "English",
+  "khmerStatus": "KHMER_TRANSLATION_REQUIRED",
+  "checklists": [
+    {
+      "id": "prep_before_cooking",
+      "title": "Before Cooking",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "steps": [
+        "Read item and quantity",
+        "Read flavor name and number if shown",
+        "Confirm sauce vs dry rub",
+        "Confirm heat tier",
+        "Confirm add-ons/dips/drizzles",
+        "Check unavailable warnings",
+        "Check missing price warnings",
+        "Confirm payment proof if bank transfer"
+      ],
+      "blockingSteps": [
+        "missing flavor",
+        "missing item",
+        "missing payment proof when bank transfer",
+        "unavailable item",
+        "missing delivery address"
+      ]
+    },
+    {
+      "id": "sauce_dry_rub_execution",
+      "title": "Sauce / Dry Rub Execution",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "steps": [
+        "Sauce first if wet sauce selected",
+        "Dry rub second if rub selected",
+        "Drizzle last if selected",
+        "Use correct serving-unit portion",
+        "Do not mix advanced formula unless selected",
+        "Use light hand for premium hot sauce drizzle"
+      ],
+      "blockingSteps": [
+        "unclear flavor formula",
+        "unclear heat level"
+      ]
+    },
+    {
+      "id": "packaging_final_check",
+      "title": "Packaging Final Check",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "steps": [
+        "Correct box/bag",
+        "Correct item count",
+        "Correct flavor label",
+        "Correct dips/add-ons",
+        "Correct drink if combo",
+        "Hot sauce bottle visible if selected",
+        "Napkins/forks if needed",
+        "Customer name checked",
+        "Pickup/delivery checked"
+      ],
+      "blockingSteps": [
+        "paid add-on missing",
+        "wrong customer name",
+        "delivery/pickup unclear"
+      ]
+    },
+    {
+      "id": "customer_clarification",
+      "title": "Clarification Before Cooking",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "steps": [
+        "Pause order",
+        "Ask one clear question",
+        "Wait for customer reply",
+        "Update staff ticket",
+        "Only then cook"
+      ],
+      "blockingSteps": [
+        "missing phone",
+        "missing address",
+        "missing flavor",
+        "missing price",
+        "ambiguous note"
+      ]
+    },
+    {
+      "id": "shift_training",
+      "title": "Daily Staff Training Reset",
+      "khmerTitle": "KHMER_TRANSLATION_REQUIRED",
+      "steps": [
+        "Review one lesson before shift",
+        "Ask one quick-check question",
+        "Review one mistake from yesterday",
+        "Confirm unavailable items",
+        "Confirm sauce/rub stock",
+        "Confirm bottle stock"
+      ],
+      "blockingSteps": []
+    }
+  ]
+}

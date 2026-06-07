@@ -1,0 +1,273 @@
+{
+  "systemName": "Wing⚡Boss Heat Economy System",
+  "version": "phase3-app-ready-2026-06-07",
+  "status": "prepared_from_user_locked_heat_system",
+  "sourcePriority": [
+    "User pasted locked Heat Economy System for heat-point logic and heat-upgrade prices.",
+    "Uploaded WingBoss_Bot_JSON_Package.zip for menu/add-on/bottle prices where present.",
+    "PRICE_REQUIRED_FROM_MENU for missing main-menu item prices."
+  ],
+  "scoringMode": "money_based_heat_spend",
+  "pointsPerUsd": 100,
+  "earnOnlyWhen": [
+    "order_paid",
+    "order_completed",
+    "not_refunded"
+  ],
+  "defaultHeatTierId": "original",
+  "meter": {
+    "scope": "both_per_item_and_cart_aggregate",
+    "alwaysVisible": true,
+    "fallback": "hide_silently_if_logic_fails",
+    "telegramSafeTextBars": [
+      {
+        "minPoints": 0,
+        "maxPoints": 99,
+        "bar": "[□□□□□□□□□□]",
+        "label": "No added heat"
+      },
+      {
+        "minPoints": 100,
+        "maxPoints": 199,
+        "bar": "[■■□□□□□□□□]",
+        "label": "Mild Heat"
+      },
+      {
+        "minPoints": 200,
+        "maxPoints": 399,
+        "bar": "[■■■■□□□□□□]",
+        "label": "Getting Hot..."
+      },
+      {
+        "minPoints": 400,
+        "maxPoints": 799,
+        "bar": "[■■■■■■■□□□]",
+        "label": "Serious Heat"
+      },
+      {
+        "minPoints": 800,
+        "maxPoints": 999,
+        "bar": "[■■■■■■■■■□]",
+        "label": "You Love Pain"
+      },
+      {
+        "minPoints": 1000,
+        "maxPoints": null,
+        "bar": "[■■■■■■■■■■]",
+        "label": "You Should Own The Bottle"
+      }
+    ]
+  },
+  "heatTiers": [
+    {
+      "id": "original",
+      "label": "Original",
+      "display": "Original",
+      "priceUsd": 0,
+      "heatPointsPreview": 0,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Default. No spice selected."
+      ]
+    },
+    {
+      "id": "hot",
+      "label": "Hot",
+      "display": "Hot 🌶️",
+      "priceUsd": 0.25,
+      "heatPointsPreview": 25,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Approved heat upgrade."
+      ]
+    },
+    {
+      "id": "spicy",
+      "label": "Spicy",
+      "display": "Spicy 🌶️🌶️",
+      "priceUsd": 0.5,
+      "heatPointsPreview": 50,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Approved heat upgrade."
+      ]
+    },
+    {
+      "id": "extreme",
+      "label": "Extreme",
+      "display": "Extreme 🌶️🌶️🌶️",
+      "priceUsd": 0.75,
+      "heatPointsPreview": 75,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Approved heat upgrade."
+      ]
+    },
+    {
+      "id": "revenge",
+      "label": "Revenge",
+      "display": "Revenge ☠️",
+      "priceUsd": 1.0,
+      "heatPointsPreview": 100,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Only appears for Extreme/Revenge-eligible flavors."
+      ]
+    },
+    {
+      "id": "nuclear",
+      "label": "Nuclear",
+      "display": "Nuclear ☢️",
+      "priceUsd": 1.5,
+      "heatPointsPreview": 150,
+      "customerFacing": true,
+      "available": true,
+      "rules": [
+        "Only allowed from Revenge base.",
+        "Nuclear only appears for allowed Extreme/Revenge flavors."
+      ]
+    }
+  ],
+  "honeyHeatModifiers": [
+    {
+      "id": "hot_honey",
+      "label": "Hot Honey",
+      "priceUsd": 0.5,
+      "heatPointsPreview": 50,
+      "heatLevel": "hot"
+    },
+    {
+      "id": "spicy_honey",
+      "label": "Spicy Honey",
+      "priceUsd": 0.75,
+      "heatPointsPreview": 75,
+      "heatLevel": "spicy"
+    },
+    {
+      "id": "extreme_honey",
+      "label": "Extreme Honey",
+      "priceUsd": 1.0,
+      "heatPointsPreview": 100,
+      "heatLevel": "extreme"
+    }
+  ],
+  "dryRubRules": [
+    "Dry rub has no spice tier unless Hot Honey modifier is selected.",
+    "Dry rub heat icons from the flavor vault are descriptive unless tied to a paid heat modifier."
+  ],
+  "bottleTrigger": {
+    "cartHeatSpendUsdThreshold": 4.0,
+    "legacyPointThreshold": 800,
+    "showAtCartReview": true,
+    "copy": "You've spent $X on heat today. At this rate, the bottle saves you money.",
+    "actions": [
+      "add_strawberry_armageddon",
+      "add_mango_mayhem",
+      "continue_without_bottle"
+    ],
+    "priceSource": "premium_hot_sauce_bottles from uploaded JSON package",
+    "lifetimeHeatSpendUsdThreshold": 12.5
+  },
+  "rewardLadder": [
+    {
+      "points": 500,
+      "rewardId": "free_30ml_dip",
+      "label": "Free 30ml Dip",
+      "appliesTo": "food_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 1000,
+      "rewardId": "two_off_wings",
+      "label": "$2 Off Wings",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 2000,
+      "rewardId": "fries_or_three_off_wings",
+      "label": "Free Regular Fries OR $3 Off Wings",
+      "appliesTo": "food_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 3500,
+      "rewardId": "five_off_wings",
+      "label": "$5 Off Wings",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles"
+      ]
+    },
+    {
+      "points": 10000,
+      "rewardId": "free_12_classic_original",
+      "label": "Free 12 Classic Wings — Original heat only",
+      "appliesTo": "wings_food_subtotal",
+      "excludes": [
+        "delivery_fee",
+        "alcohol",
+        "hot_sauce_bottles",
+        "paid_heat_upgrades"
+      ]
+    },
+    {
+      "points": 20000,
+      "rewardId": "free_hot_sauce_bottle",
+      "label": "Free Hot Sauce Bottle — Strawberry Armageddon or Mango Mayhem",
+      "appliesTo": "hot_sauce_bottle_reward_only",
+      "excludes": [
+        "delivery_fee",
+        "alcohol"
+      ]
+    }
+  ],
+  "redemption": {
+    "mode": "manual_claim_button",
+    "screen": "cart_review_before_payment",
+    "deductOnSelection": true,
+    "restoreIfCheckoutAbandoned": true,
+    "requirements": {
+      "minCompletedOrders": 2,
+      "orMinLifetimeSpendUsd": 10,
+      "cooldownDays": 7
+    },
+    "doesNotStackWith": [
+      "first_time_10_percent_discount"
+    ]
+  },
+  "profileFields": [
+    "heat_points_available",
+    "heat_points_lifetime",
+    "heat_spend_lifetime_usd",
+    "heat_points_redeemed_total",
+    "max_heat_level_reached",
+    "bottles_purchased_count",
+    "last_redeem_at"
+  ],
+  "privacy": [
+    "No IP tracking",
+    "No device fingerprinting",
+    "No payment data stored",
+    "Telegram ID only"
+  ]
+}

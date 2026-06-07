@@ -1,0 +1,64 @@
+{
+  "systemName": "Wing⚡Boss Customer Clarification Scripts",
+  "version": "phase6-2026-06-07",
+  "sourceOfTruth": "English",
+  "khmerStatus": "KHMER_TRANSLATION_REQUIRED",
+  "scripts": [
+    {
+      "id": "missing_flavor",
+      "trigger": "Flavor missing",
+      "english": "Please choose your flavor before we cook this order.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Do not cook until customer chooses."
+    },
+    {
+      "id": "missing_phone",
+      "trigger": "Phone missing",
+      "english": "Please send your phone number so staff can confirm your order.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Required for pickup and delivery."
+    },
+    {
+      "id": "missing_delivery_address",
+      "trigger": "Delivery address missing",
+      "english": "Please send your delivery address or choose pickup.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Do not dispatch without address."
+    },
+    {
+      "id": "missing_price",
+      "trigger": "Price requires confirmation",
+      "english": "Some prices need staff confirmation. We will confirm your final total before cooking.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Escalate to owner/current menu before final total."
+    },
+    {
+      "id": "unavailable_item",
+      "trigger": "Item unavailable",
+      "english": "Sorry, that item is unavailable today. We can help you choose the closest replacement.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Do not say permanently removed unless owner confirms."
+    },
+    {
+      "id": "bank_proof_needed",
+      "trigger": "Bank transfer proof missing",
+      "english": "Please upload your payment proof photo before we start cooking.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Pay-first-before-cook rule."
+    },
+    {
+      "id": "direct_order_benefit",
+      "trigger": "Customer asks why direct order",
+      "english": "Direct order is faster for repeat orders and clearer for custom flavors. Staff confirms with you here in Telegram.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Do not attack delivery apps."
+    },
+    {
+      "id": "heat_confirmation",
+      "trigger": "Extreme/Revenge/Nuclear heat selected",
+      "english": "Just confirming: you selected a very hot heat level. We will prepare it as ordered.",
+      "khmer": "KHMER_TRANSLATION_REQUIRED",
+      "staffNote": "Use for high-heat selections or uncertain customers."
+    }
+  ]
+}

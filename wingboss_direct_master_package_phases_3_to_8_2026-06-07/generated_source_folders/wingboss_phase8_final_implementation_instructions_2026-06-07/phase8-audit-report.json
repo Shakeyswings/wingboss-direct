@@ -1,0 +1,26 @@
+{
+  "status": "Prepared",
+  "scope": "Final implementation instructions only",
+  "claims": {
+    "filesGenerated": true,
+    "deploymentVerified": false,
+    "telegramLiveTested": false,
+    "npmInstalled": false,
+    "frontendBuildRun": false,
+    "backendStarted": false
+  },
+  "criticalWarnings": [
+    "The legacy index.js should not be used unchanged for Heat Economy because old logic can award points too early.",
+    "Phase 5 backend should be used as the corrected bot baseline.",
+    "Bot token must never be committed or inserted into frontend code.",
+    "Public launch should wait until live staff group notification is verified."
+  ],
+  "recommendedNextActions": [
+    "Run npm install and npm run build in Phase 4 frontend.",
+    "Deploy frontend to HTTPS host.",
+    "Run npm install and npm start in Phase 5 backend with real env vars.",
+    "Configure BotFather Mini App URL.",
+    "Run Phase 7 live test script.",
+    "Launch to staff/internal orders first, not public customers."
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "systemName": "Wing⚡Boss Staff Quiz Bank",
+  "version": "phase6-2026-06-07",
+  "questions": [
+    {
+      "id": "Q_L001",
+      "lessonId": "L001",
+      "categoryId": "order_reading",
+      "question": "What are the first three parts to check?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Item, flavor, add-ons.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L002",
+      "lessonId": "L002",
+      "categoryId": "order_reading",
+      "question": "Why do we check quantity first?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Because quantity controls portions and flavor limits.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L003",
+      "lessonId": "L003",
+      "categoryId": "order_reading",
+      "question": "What should staff read for advanced flavors?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Both the number and the flavor name.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L004",
+      "lessonId": "L004",
+      "categoryId": "sauce_vs_dry_rub",
+      "question": "What is the difference?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce is wet coating; dry rub is seasoning powder.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L005",
+      "lessonId": "L005",
+      "categoryId": "sauce_vs_dry_rub",
+      "question": "What marker should staff look for?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "The dry-rub type/staff label.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L006",
+      "lessonId": "L006",
+      "categoryId": "heat_system",
+      "question": "What is the default heat?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "No added spice unless selected.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L007",
+      "lessonId": "L007",
+      "categoryId": "heat_system",
+      "question": "When do we confirm heat?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Before cooking and before packing.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L008",
+      "lessonId": "L008",
+      "categoryId": "heat_system",
+      "question": "What should staff do if Nuclear is unclear?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Ask owner or manager before cooking.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L009",
+      "lessonId": "L009",
+      "categoryId": "add_ons_drizzles_dips",
+      "question": "When can staff include an add-on?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Only when selected, charged, or explicitly included.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L010",
+      "lessonId": "L010",
+      "categoryId": "add_ons_drizzles_dips",
+      "question": "What is the correct prep order?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce first, dry rub second, drizzle last.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L011",
+      "lessonId": "L011",
+      "categoryId": "packaging",
+      "question": "What must be checked before handoff?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Item, flavor, add-ons, dips, drink, napkins, customer name.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L012",
+      "lessonId": "L012",
+      "categoryId": "packaging",
+      "question": "Where should a bottle go?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Separate or clearly visible.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L013",
+      "lessonId": "L013",
+      "categoryId": "customer_confirmation",
+      "question": "What do we do when key info is missing?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Ask first; do not cook yet.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L014",
+      "lessonId": "L014",
+      "categoryId": "missing_information",
+      "question": "What does PRICE_REQUIRED_FROM_MENU mean?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Do not guess; staff or owner must confirm.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L015",
+      "lessonId": "L015",
+      "categoryId": "unavailable_items",
+      "question": "What should staff say for unavailable items?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Unavailable today; offer replacement.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L016",
+      "lessonId": "L016",
+      "categoryId": "payment_dispatch",
+      "question": "When can staff dispatch bank-transfer orders?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "After payment proof is received.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L017",
+      "lessonId": "L017",
+      "categoryId": "direct_orders",
+      "question": "What is the safe direct-order message?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Faster reorder, clearer customization, staff confirms directly.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    },
+    {
+      "id": "Q_L018",
+      "lessonId": "L018",
+      "categoryId": "cleaning_safety",
+      "question": "What areas reset after rush?",
+      "khmerQuestion": "KHMER_TRANSLATION_REQUIRED",
+      "answer": "Sauce, dry rub, packaging, and order screen.",
+      "khmerAnswer": "KHMER_TRANSLATION_REQUIRED",
+      "type": "short_answer",
+      "passRule": "Staff can answer in simple English or Khmer after training review."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "wingboss-phase5-bot-backend-workspace",
+  "version": "2026.06.07-phase5",
+  "private": true,
+  "scripts": {
+    "verify": "node apps/bot/scripts/verify-phase5.js",
+    "check": "node --check apps/bot/src/index.js && node --check apps/bot/scripts/verify-phase5.js"
+  },
+  "workspaces": [
+    "apps/bot"
+  ]
+}

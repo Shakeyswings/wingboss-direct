@@ -1,0 +1,23 @@
+{
+  "systemName": "Wing⚡Boss Phase 6 Staff Academy Audit Report",
+  "version": "phase6-2026-06-07",
+  "status": "prepared",
+  "whatWasDone": [
+    "Expanded Staff Academy lessons into short service-ready modules.",
+    "Added SOP checklists for cooking, sauce/dry-rub execution, packaging, clarification, and shift training.",
+    "Added customer clarification scripts with Khmer placeholders.",
+    "Added order-reading examples for common staff mistakes.",
+    "Added quiz bank generated from lesson quick-check questions.",
+    "Added training matrix by staff role.",
+    "Added Phase 6 integration notes for frontend and backend use."
+  ],
+  "pricingPolicy": "No new prices invented. Lessons avoid quoting prices except PRICE_REQUIRED_FROM_MENU behavior.",
+  "heatSystemPolicy": "Heat Points must only be awarded after paid + completed + not refunded status.",
+  "knownOpenItems": [
+    "Khmer translations are placeholders and require human review.",
+    "Staff user IDs and role mapping still need final setup in bot backend.",
+    "Live training completion tracking requires Phase 7 or later implementation.",
+    "No production Telegram test was run in this phase."
+  ],
+  "verification": "JSON files generated and parsed successfully."
+}
