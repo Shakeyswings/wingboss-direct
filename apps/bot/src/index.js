@@ -21,7 +21,7 @@ function newOrderId() {
 function miniAppKeyboard() {
   return {
     reply_markup: {
-      inline_keyboard: [[{ text: 'Open WingBoss Direct', web_app: { url: config.miniAppUrl } }]],
+      inline_keyboard: [[{ text: 'Open WingBoss Direct', url: config.miniAppUrl }]],
     },
   };
 }
